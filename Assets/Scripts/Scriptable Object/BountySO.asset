@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ea31ef6ce6f7b4380364d205f8b2c9, type: 3}
+  m_Name: BountySO
+  m_EditorClassIdentifier: 
+  items:
+  - attack: 1
+    getGold: 2
+    getRuby: 3
+    score: 4
+    sprite: {fileID: 0}
+  - attack: 5
+    getGold: 6
+    getRuby: 7
+    score: 8
+    sprite: {fileID: 0}
+  - attack: 9
+    getGold: 10
+    getRuby: 11
+    score: 12
+    sprite: {fileID: 0}

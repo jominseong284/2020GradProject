@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: ItemSO
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSO
+  items:
+  - attack: 1
+    gold: 2
+    ruby: 3
+    level: 4
+    sprite: {fileID: 0}
+  - attack: 5
+    gold: 6
+    ruby: 7
+    level: 8
+    sprite: {fileID: 0}
+  - attack: 9
+    gold: 10
+    ruby: 11
+    level: 12
+    sprite: {fileID: 0}
