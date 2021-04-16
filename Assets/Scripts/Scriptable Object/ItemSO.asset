@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 01ed104d0f5546e47a7a9d2c6162a67c, type: 3}
   m_Name: ItemSO
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   items:
@@ -17,14 +17,14 @@ MonoBehaviour:
     gold: 2
     ruby: 3
     level: 4
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 3746667010c9a91498e51ead5696b878, type: 3}
   - attack: 5
     gold: 6
     ruby: 7
     level: 8
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: d2343d66dc13a224994dfcbe71a362ea, type: 3}
   - attack: 9
     gold: 10
     ruby: 11
     level: 12
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 12f51dbbd65dfac4ab87fc971a9a6b6b, type: 3}

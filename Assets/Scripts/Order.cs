@@ -7,12 +7,22 @@ public class Order : MonoBehaviour
     [SerializeField] Renderer[] backRenderers;
     [SerializeField] Renderer[] middleRenderers;
     [SerializeField] string sortingLayerName;
+    int originOrder;
 
     void Start()
     {
         SetOrder(0);
     }
+    public void SetOriginOrder(int originOrder)
+    {
+        this.originOrder = originOrder;
+        SetOrder(originOrder);
+    }
 
+    public void SetMostFrontOrder(bool isMostFront)
+    {
+        SetOrder(isMostFront ? 100 : originOrder);
+    }
     public void SetOrder(int order)
     {
         int mulOrder = order * 10;

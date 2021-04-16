@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 public class BountyCard : MonoBehaviour
 {
     [SerializeField] SpriteRenderer bountyCard;
@@ -16,7 +17,7 @@ public class BountyCard : MonoBehaviour
     //[SerializeField] Sprite ruby;
 
     public Bounty bounty;
-
+    public PRS originPRS;
     public void Setup(Bounty bounty)
     {
         this.bounty = bounty;
@@ -26,5 +27,32 @@ public class BountyCard : MonoBehaviour
         goldNumTMP.text = this.bounty.getGold.ToString();
         rubyNumTMP.text = this.bounty.getRuby.ToString();
         scoreTMP.text = this.bounty.score.ToString();
+    }
+
+    void OnMouseOver()
+    {
+        BountyManager.Inst.CardMouseOver(this);
+    }
+
+    void OnMouseExit()
+    {
+        BountyManager.Inst.CardMouseExit(this);   
+    }
+
+    public void MoveTransform(PRS prs, bool useDotween, float dotweenTime = 0)
+    {
+        if (useDotween)
+        {
+            transform.DOMove(prs.pos, dotweenTime);
+            //transform.DORotateQuaternion(prs.rot, dotweenTime);
+            transform.DOScale(prs.scale, dotweenTime);
+        }
+
+        else
+        {
+            transform.position = prs.pos;
+            //transform.rotation = prs.rot;
+            transform.localScale = prs.scale;
+        }
     }
 }

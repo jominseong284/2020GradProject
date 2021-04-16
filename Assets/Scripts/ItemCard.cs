@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 public class ItemCard : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class ItemCard : MonoBehaviour
     //[SerializeField] Sprite ruby;
 
     public Item item;
+    public PRS originPRS;
     public void Setup(Item item)
     {
         this.item = item;
@@ -26,5 +28,31 @@ public class ItemCard : MonoBehaviour
         goldNumTMP.text = this.item.gold.ToString();
         rubyNumTMP.text = this.item.ruby.ToString();
         levelTMP.text = this.item.level.ToString();
+    }
+    void OnMouseOver()
+    {
+        ItemManager.Inst.CardMouseOver(this);
+    }
+
+    void OnMouseExit()
+    {
+        ItemManager.Inst.CardMouseExit(this);
+    }
+
+    public void MoveTransform(PRS prs, bool useDotween, float dotweenTime = 0)
+    {
+        if (useDotween)
+        {
+            transform.DOMove(prs.pos, dotweenTime);
+            //transform.DORotateQuaternion(prs.rot, dotweenTime);
+            transform.DOScale(prs.scale, dotweenTime);
+        }
+
+        else
+        {
+            transform.position = prs.pos;
+            //transform.rotation = prs.rot;
+            transform.localScale = prs.scale;
+        }
     }
 }
